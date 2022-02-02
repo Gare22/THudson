@@ -1,0 +1,255 @@
+/*Circl - style.css
+Author: Garrett Tallent
+Description: Main style sheet for circl landing page. Attempts to follow 
+            SMACSS guidelines: (Base)Elements, Layouts, Modules, States, Themes. 
+            
+
+/*************************************************
+            Elements
+**************************************************/
+html{
+    font-size:10px;
+}
+
+html, body{
+    margin:0;
+    padding:0;
+    background-color: #F5F5F5;
+}
+
+p, img, a, body{
+    font-size:1.6rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    color:#252525;
+    text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5{
+    padding:0;
+    margin:0;
+}
+
+a:hover{
+    color:rgb(240, 240, 240);
+}
+
+
+div{
+    box-sizing: border-box;
+}
+
+
+@media (min-width: 769px){
+    p, a, img{
+        font-size:2rem;
+    }  
+}
+
+/*************************************************
+            Modules
+**************************************************/
+
+/*Navbar*/
+.l-navbar{
+    position:sticky;
+    top:0;
+    left:0;
+    min-height: 6rem;
+    width: 100%;
+    background-color: #4b8fe2;
+    color:whitesmoke;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 7rem;
+}
+
+.l-nav-links{
+    display:none;
+}
+
+.mobile-nav-button{
+    justify-self:right;
+    align-self: center;
+    padding-right: 2rem;
+}
+
+.mobile-nav-button i{
+    color:whitesmoke;
+    font-size:5rem;
+}
+
+.l-nav-links.mobilebutton-is-pressed{
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #4b8fe2;
+}
+.l-nav-links a{
+    padding:2rem;
+    color: whitesmoke;
+    min-height: 6rem;
+}
+
+.l-nav-links a:hover{
+    color:rgb(240, 240, 240);
+}
+
+.l-nav-links a.is-active{
+    color:rgb(97, 97, 97);
+    background-color: #b7d894;
+}
+
+@media (min-width:769px) {
+    .l-navbar{
+        color:#4b8fe2;
+    }
+    
+    .is-mobile{
+        display:none;
+    }
+    
+    .mobile-nav-button{
+    
+        display:none;
+    }
+
+    .l-nav-links a{
+        color:rgb(97, 97, 97);
+        text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+        transition: text-decoration-color 600ms, color 600ms;
+        padding-left:4rem;
+    }
+
+    .l-nav-links a:hover{
+        color:#4b8fe2;
+        text-decoration-color:#4b8fe2;
+    }
+    
+    .l-nav-links a.is-active{
+        text-decoration: underline 0.15em;
+        background-color: inherit
+    }
+
+    .l-nav-links, .l-nav-links.mobilebutton-is-pressed{
+        display: flex;
+        justify-content: right;
+        padding-right:10rem;
+    }
+}
+
+/*Body*/
+.l-body{
+    min-height: calc(100vh - 13rem);
+}
+
+/*Footer*/
+.l-foot{
+    min-height: 6rem;
+    display:flex;
+    justify-content: center;
+    gap:2rem;
+    padding:2rem;
+}
+
+/*Front Page*/
+.l-front{
+    height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+}
+
+.l-front > * {
+    width: min(90%, 769px);
+    margin: auto;
+}
+
+/*All images and their containers*/
+.img-container{
+    text-align: center;
+    margin:auto;
+    width: 80%;
+}
+
+.img-container img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 769px){
+    .img-container{
+        width: 70%;
+    }
+}
+
+
+/*Padding and Margins*/
+.padding-bot-5{
+    padding-bottom: 5rem;
+}
+
+.padding-2{
+    padding:2rem;
+}
+
+/*************************************************
+            States (not directly related to a module)
+**************************************************/
+@media (min-width:769px) {
+    
+    /*class is-mobile only displays if the device is-mobile*/
+    .is-mobile{
+        display:none;
+    }
+}
+
+
+/*************************************************
+            Themes
+**************************************************/
+.nav-theme{
+    background-color: #3276C9;
+}
+
+.front-theme{
+    color:whitesmoke;
+    background-color: #3276C9;
+    background-image: url("../images/front.png");
+}
+
+.front-theme h4{
+    font-size: 3rem;
+}
+
+.front-theme h3{
+    font-size: 6rem;
+}
+
+.foot-theme a{
+    color:rgb(97, 97, 97, 0.5);
+}
+
+.foot-theme a:hover{
+    color:#b7d894;
+}
+
+@media (min-width:769px) {
+    .nav-theme{
+        background-color: whitesmoke;
+        box-shadow: 0px 0px 10px rgb(46, 46, 46, 0.5);
+    }
+}
+.shadow{
+    box-shadow: 0px 0px 10px rgb(46, 46, 46, 0.5);
+}
+
+.centered-text{
+    text-align: center;
+}
