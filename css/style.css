@@ -33,16 +33,11 @@ p, h1, h2, h3, h4, h5{
     margin:0;
 }
 
-a:hover{
-    color:rgb(240, 240, 240);
-}
-
-
 div{
     box-sizing: border-box;
 }
 
-
+/*Desktop font-sizes*/
 @media (min-width: 769px){
     p, a, img{
         font-size:2rem;
@@ -153,9 +148,9 @@ div{
     height:auto;
 }
 
-
 /*Body*/
 .l-body{
+    /*temp min-height for dev*/
     min-height: calc(100vh - 13rem);
 }
 
@@ -168,42 +163,11 @@ div{
     padding:2rem;
 }
 
-/*Front Page*/
-.l-front{
-    height: calc(100vh - 6rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    text-align: center;
-}
-
-.l-front > * {
-    width: min(90%, 769px);
-    margin: auto;
-}
-
-@media (min-width: 769px){
-    .img-container{
-        width: 70%;
-    }
-}
-
-
-/*Padding and Margins*/
-.padding-bot-5{
-    padding-bottom: 5rem;
-}
-
-.padding-2{
-    padding:2rem;
-}
 
 /*************************************************
             States (not directly related to a module)
 **************************************************/
 @media (min-width:769px) {
-    
     /*class is-mobile only displays if the device is-mobile*/
     .is-mobile{
         display:none;
@@ -218,38 +182,9 @@ div{
     background-color: #3276C9;
 }
 
-.front-theme{
-    color:whitesmoke;
-    background-color: #3276C9;
-    background-image: url("../images/front.png");
-}
-
-.front-theme h4{
-    font-size: 3rem;
-}
-
-.front-theme h3{
-    font-size: 6rem;
-}
-
-.foot-theme a{
-    color:rgb(97, 97, 97, 0.5);
-}
-
-.foot-theme a:hover{
-    color:#b7d894;
-}
-
 @media (min-width:769px) {
     .nav-theme{
         background-color: whitesmoke;
         box-shadow: 0px 0px 10px rgb(46, 46, 46, 0.5);
     }
-}
-.shadow{
-    box-shadow: 0px 0px 10px rgb(46, 46, 46, 0.5);
-}
-
-.centered-text{
-    text-align: center;
 }
