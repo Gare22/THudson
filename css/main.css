@@ -328,13 +328,6 @@ Green - #b2baaa
     font-family:serif;
 }
 
-.navbar-theme{
-    /*background-color: rgb(243, 243, 243);*/
-    /*font:*/
-    /*color:*/
-    /*background-image:*/
-}
-
 .navlinks-theme{
     background-color: #262626;
 }
@@ -370,12 +363,3 @@ Green - #b2baaa
     color: #80966b;
 }
 
-@media (min-width:769px) {
-    .navbar-theme{
-        /*background-color: rgb(243, 243, 243);*/
-    }
-
-    .navlinks-theme{
-        
-    }
-}
