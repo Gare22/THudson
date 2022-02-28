@@ -1,4 +1,3 @@
-RewriteEngine On
-RewriteBase /
-RewriteCond %{HTTP_HOST} ^www.tammyhudson.com [NC]
-RewriteRule ^(.*)$ http://tammyhudson.com/$1 [L,R=301]
+Order allow,deny
+Allow from all
+Require all granted
