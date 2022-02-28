@@ -1,0 +1,381 @@
+/*Circl - style.css
+Author: Garrett Tallent
+Description: Main style sheet for circl landing page. Attempts to follow 
+            SMACSS guidelines: (Base)Elements, Layouts, Modules, States, Themes. 
+            
+
+/*************************************************
+            Elements
+**************************************************/
+html{
+    font-size:10px;
+}
+
+html, body{
+    margin:0;
+    padding:0;
+}
+
+p, img, a, body{
+    font-size:1.4rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    color:#262626;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5{
+    padding:0;
+    margin:0;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+/*Desktop font-sizes*/
+@media (min-width: 769px){
+    p, a, img{
+        font-size:1.8rem;
+    }  
+}
+
+/*************************************************
+            Modules - structure, sizing, etc.
+**************************************************/
+.line-break{
+    margin: auto;
+    width: 30vw;
+    border-bottom: .2rem solid #262626;
+}
+.title{
+    font-size: 3rem;
+}
+
+/*Navbar*/
+.l-navbar{
+    width: 100%;
+}
+
+.l-nav-links{
+    width: 100%;
+    height: 5rem;
+}
+
+.logo {
+    width: fit-content;
+    margin:auto;
+}
+
+.logo > img{
+    max-width: min(45vw, 30rem);
+    width: auto;
+    height:auto;
+}
+/*Desktop version*/
+@media (min-width:769px) {
+    .l-navbar{
+        width: 100%;
+    }
+
+    .l-nav-links{
+        width: 100%;
+        height: 5rem;
+    }
+
+    .logo {
+        width: fit-content;
+        margin:auto;
+    }
+
+    .logo > img{
+        max-width: min(45vw, 30rem);
+        width: auto;
+        height:auto;
+    }
+}
+
+/*Body*/
+.l-body{
+    /*temp min-height for dev*/
+    min-height: calc(100vh - 13rem);
+}
+
+/*Homepage gallery*/
+.l-home-gallery{
+    /*temp min-height for dev*/
+    min-height: 100vh;
+    /*temp background color*/
+}
+
+/*About Tammy*/
+.l-about{
+    margin-top:5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.portrait-container{
+    max-height: 90vh;
+    max-width: 40vw;
+}
+
+.portrait-container img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    
+}
+
+.l-about-paragraphs{
+    width: 40vw;
+}
+
+/*Products*/
+.l-products{
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    gap:5vw;
+    margin-top:3rem;
+    padding: 10rem;
+}
+
+.l-products a{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 30rem;
+}
+
+.l-products a img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10%;
+    background-color: #f1f1f1;
+    margin-bottom: .5rem;
+}
+.l-products a h3{
+    position:relative;
+    top:-5rem;
+    padding: .5rem;
+    border-radius:2rem;
+}
+/*Desktop Version*/
+@media (min-width:769px){
+    .l-body{
+        /*temp min-height for dev*/
+        min-height: calc(100vh - 13rem);
+    }
+
+    /*Homepage gallery*/
+    .l-home-gallery{
+        /*temp min-height for dev*/
+        min-height: 100vh;
+        /*temp background color*/
+    }
+
+    /*About Tammy*/
+    .l-about{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .portrait-container{
+        max-height: 90vh;
+        max-width: 40vw;
+    }
+
+    .portrait-container img{
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+    }
+
+    .l-about-paragraphs{
+        width: 40vw;
+    }
+
+    /*Products*/
+    .l-products{
+        display: flex;
+        justify-content: center;
+        flex-direction:row;
+        gap:5vw;
+        margin-top:3rem;
+        padding: 10rem;
+    }
+
+    .l-products a{
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .l-products a img{
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 10%;
+        background-color: #f1f1f1;
+        margin-bottom: .5rem;
+    }
+    .l-products a h3{
+        position:relative;
+        top:-5rem;
+        padding: .5rem;
+        border-radius:2rem;
+    }
+}
+
+/*Footer*/
+.l-foot{
+    width: 100%;
+    min-height: 6rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:2rem;
+    padding:2rem;
+}
+
+.l-footer-links{
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    gap:5vw;
+    margin-top:3rem; 
+}
+
+.l-footer-links a{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 12vw;
+    height: 12vw;
+}
+
+.l-footer-links a img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    margin-bottom: .5rem;
+}
+
+.l-copyright{
+    margin-top:4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:4rem;
+}
+
+.l-copyright *{
+    padding: 0;
+    margin: 0;
+}
+
+/*************************************************
+            States (not directly related to a module)
+**************************************************/
+.is-active{
+    text-decoration:wavy;
+}
+@media (min-width:769px) {
+    /*class is-mobile only displays if the device is-mobile*/
+    .is-mobile{
+        display:none;
+    }
+}
+
+
+/*************************************************
+            Themes - colors, backgrounds, fonts, decorations
+**************************************************/
+
+/* Color Palette
+Dark Gray - #262626
+Gray - #57585e
+Light Gray - #a6a6a6
+White - #f1f1f1
+Green - #b2baaa
+*/
+
+.main-theme{
+    background-color: #f1f1f1;
+}
+
+.main-theme *{
+    font-family:serif;
+}
+
+.navbar-theme{
+    /*background-color: rgb(243, 243, 243);*/
+    /*font:*/
+    /*color:*/
+    /*background-image:*/
+}
+
+.navlinks-theme{
+    background-color: #262626;
+}
+
+.navlinks-theme *{
+    color:#f1f1f1;
+}
+
+.navlinks-theme a:hover{
+    color:#80966b;
+}
+
+.title-theme{
+    font-family:Verdana, Geneva, Tahoma, cursive;
+}
+
+
+.caption-theme{
+    color:whitesmoke;
+    font-variant: small-caps;
+    background-color: rgba(0, 0, 0, 0.558);
+}
+
+.foot-theme{
+    background-color: #262626;
+}
+.foot-theme * {
+    color:rgb(152, 151, 151);
+    font-variant: small-caps;
+}
+
+.foot-theme a:hover{
+    color: #80966b;
+}
+
+@media (min-width:769px) {
+    .navbar-theme{
+        /*background-color: rgb(243, 243, 243);*/
+    }
+
+    .navlinks-theme{
+        
+    }
+}
