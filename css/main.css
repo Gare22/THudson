@@ -36,6 +36,10 @@ div{
     box-sizing: border-box;
 }
 
+img{
+    pointer-events: none;
+}
+
 /*Desktop font-sizes*/
 @media (min-width: 769px){
     p, a, img{
@@ -175,7 +179,7 @@ div{
     min-height: 100%;
     object-fit: cover;
     border-radius: 10%;
-    background-color: #f1f1f1;
+    background-color: #313131;
     margin-bottom: .5rem;
 }
 .l-products a h3{
@@ -183,6 +187,14 @@ div{
     top:-5rem;
     padding: .5rem;
     border-radius:2rem;
+}
+
+.l-products a:hover img{
+    opacity: 0.8;
+}
+
+.l-products a:hover h3{
+    color:#80966b;
 }
 /*Desktop Version*/
 @media (min-width:769px){
@@ -204,11 +216,13 @@ div{
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin-bottom: 10rem;
     }
 
     .portrait-container{
         max-height: 90vh;
         max-width: 40vw;
+        text-align: center;
     }
 
     .portrait-container img{
@@ -249,7 +263,7 @@ div{
         min-height: 100%;
         object-fit: cover;
         border-radius: 10%;
-        background-color: #f1f1f1;
+        background-color: #020202;
         margin-bottom: .5rem;
     }
     .l-products a h3{
@@ -297,6 +311,10 @@ div{
     border-radius: 50%;
     background-color: #f1f1f1;
     margin-bottom: .5rem;
+}
+
+.l-footer-links a:hover img{
+    opacity: 0.5;
 }
 
 
@@ -406,6 +424,7 @@ Green - #b2baaa
 .title-theme{
     font-family:Verdana, Geneva, Tahoma, cursive;
 }
+
 
 
 .caption-theme{
