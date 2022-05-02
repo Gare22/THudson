@@ -9,5 +9,5 @@ if(empty($user)){
 <p>Click here to <a href="auth/logout.php">log out</a></p>
 
 <?php #display galleries
-    #for each folder in "imgs/galleries/", generate a link. If link is clicked, include "gallery"
+    #for each folder in "imgs/galleries/", generate a link. If link is clicked, use GET http request with gallery number
 ?>

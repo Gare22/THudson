@@ -9,9 +9,14 @@
     <link rel="icon" href="imgs/appicon.ico">
     
     <!--Stylsheets-->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Raleway&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 <body class="main-theme">
@@ -32,6 +37,8 @@
     </div>
     <div class="line-break"></div>
 </div>
+
+
 <div id="body" class="l-body">
     <div id="homepagegallery" class="l-home-gallery home-gallery-theme">
     </div>
@@ -60,51 +67,47 @@
         <div id="aboutparagraphs" class="l-about-paragraphs">
             <h3 class="title title-theme">Tammy Hudson</h3>
             <p>
-                (This is all filler text) Hi! I'm Tammy Hudson, a photographer based in Knoxville, Tennessee. I have been .... I believe photography... more fluff and stuff. 
+                Hi! I'm Tammy Hudson, a photographer based in Knoxville, Tennessee. I have been .... I believe photography... more fluff and stuff. 
             </p>
 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-
-            <p>
-                The process...
-            </p>
-            <ul>
-                <li>Message Tammy...</li>
-                <li>Schedule a date...</li>
-                <li>Design...</li>
-                <li>Final product...</li>
-            </ul>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            
+                <h3 class="subtitle subtitle-theme">The Process</h3>
+                <ol>
+                    <li>Message Tammy...</li>
+                    <li>Schedule a date...</li>
+                    <li>Design...</li>
+                    <li>Final product...</li>
+                </ol>
+            
         </div>
     </div>
-
 </div>
+
+
 <div id="footer" class="l-foot foot-theme">
     <div id="footerlinks" class="l-footer-links">
-        <a href="https://www.facebook.com/" target="_blank">
+        <a href="https://www.facebook.com/TammyHudsonPhotography" target="_blank">
             <img src="imgs/logo.png">
             facebook
         </a>
-        <a href="https://www.instagram.com/" target="_blank">
+        <a href="https://www.instagram.com/tammyhudsonphotography/?hl=en" target="_blank">
             <img src="imgs/logo.png">
             instagram
         </a>
-        <a href="https://www.instagram.com/" target="_blank">
+        <a href="./contact/subscribe/">
             <img src="imgs/logo.png">
             subscribe
         </a>
-        <a href="https://www.instagram.com/" target="_blank">
+        <a href="./contact">
             <img src="imgs/logo.png">
             contact
         </a>
     </div>
     <div id="copyright" class="l-copyright">
-        <a href="privacy/index.html">privacy policy</a>
+        <a href="/privacy/">privacy policy</a>
         <p>
             copyright ©
             <?php $the_year = date("Y"); echo $the_year; ?>

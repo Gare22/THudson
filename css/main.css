@@ -7,6 +7,9 @@ Description: Main style sheet for circl landing page. Attempts to follow
 /*************************************************
             Elements
 **************************************************/
+
+
+
 html{
     font-size:10px;
 }
@@ -19,7 +22,6 @@ html, body{
 p, img, a, body{
     font-size:1.4rem;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
 a{
@@ -40,6 +42,16 @@ img{
     pointer-events: none;
 }
 
+ol{
+    padding:2rem;
+    list-style-type: decimal;
+}
+
+ol li{
+    margin: 0 1rem;
+    padding: 0 1rem;
+}
+
 /*Desktop font-sizes*/
 @media (min-width: 769px){
     p, a, img{
@@ -56,9 +68,15 @@ img{
     border-bottom: .2rem solid #262626;
 }
 .title{
-    font-size: 3rem;
+    font-size: 7rem;
     width: fit-content;
     margin:auto;
+}
+
+.subtitle{
+    margin-top:2rem;
+    font-size: 2.5rem;
+    width: fit-content;
 }
 
 /*Navbar*/
@@ -142,7 +160,7 @@ img{
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 10%;
+    /*border-radius: 10%;*/
 }
 
 .l-about-paragraphs{
@@ -151,7 +169,10 @@ img{
 
 .l-about-paragraphs p{
     font-size: 2rem;
+    padding:1rem 0;
 }
+
+.l-about-paragraphs
 
 /*Products*/
 .l-products{
@@ -178,7 +199,7 @@ img{
     width: 100%;
     min-height: 100%;
     object-fit: cover;
-    border-radius: 10%;
+    /*border-radius: 10%;*/
     background-color: #313131;
     margin-bottom: .5rem;
 }
@@ -186,11 +207,11 @@ img{
     position:relative;
     top:-5rem;
     padding: .5rem;
-    border-radius:2rem;
+    /*border-radius:2rem;*/
 }
 
 .l-products a:hover img{
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .l-products a:hover h3{
@@ -219,6 +240,10 @@ img{
         margin-bottom: 10rem;
     }
 
+    .l-about li{
+        font-size: 2rem;
+    }
+
     .portrait-container{
         max-height: 90vh;
         max-width: 40vw;
@@ -229,7 +254,7 @@ img{
         width: 80%;
         height: 80%;
         object-fit: contain;
-        border-radius: 10%;
+        /*border-radius: 10%;*/
     }
 
     .l-about-paragraphs{
@@ -262,7 +287,7 @@ img{
         min-width: 100%;
         min-height: 100%;
         object-fit: cover;
-        border-radius: 10%;
+        /*border-radius: 10%;*/
         background-color: #020202;
         margin-bottom: .5rem;
     }
@@ -270,7 +295,7 @@ img{
         position:relative;
         top:-5rem;
         padding: .5rem;
-        border-radius:2rem;
+        /*border-radius:2rem;*/
     }
 }
 /*Footer*/
@@ -314,7 +339,7 @@ img{
 }
 
 .l-footer-links a:hover img{
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 
@@ -394,12 +419,23 @@ White - #f1f1f1
 Green - #b2baaa
 */
 
+
+/*Google Fonts
+font-family: 'Cookie', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
 .main-theme{
     background-color: #f1f1f1;
 }
 
 .main-theme *{
     font-family:serif;
+}
+
+.main-theme p{
+    font-family: 'Roboto' sans-serif;
 }
 
 .nav-links-theme{
@@ -412,6 +448,7 @@ Green - #b2baaa
 }
 
 .nav-links-theme .is-active {
+    /*border-radius: 2rem;*/
     border: 2px solid whitesmoke;
 }
 
@@ -422,7 +459,11 @@ Green - #b2baaa
 }
 
 .title-theme{
-    font-family:Verdana, Geneva, Tahoma, cursive;
+    font-family: 'Cookie', cursive;
+}
+
+.subtitle-theme{
+    font-family: 'Roboto', sans-serif;
 }
 
 
