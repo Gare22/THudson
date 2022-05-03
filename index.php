@@ -40,7 +40,17 @@
 
 
 <div id="body" class="l-body">
-    <div id="homepagegallery" class="l-home-gallery home-gallery-theme">
+    <div id="homepagegallery" class="l-gallery home-gallery-theme">
+        <div class="gallery-items no-scrollbar">
+        <?php //Home page gallery goes here
+            $images = glob('imgs/galleries/homepage/*.{jpg,png,gif}', GLOB_BRACE);
+            foreach($images as $image){
+                echo('<div class="gallery-item">');
+                echo('<img src="' . $image . '">');
+                echo('</div>');
+            }
+        ?>
+        </div>
     </div>
     <div id="products" class="l-products products-theme">
         <a href="products/">

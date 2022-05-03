@@ -37,7 +37,6 @@
 
 <div id="body" class="l-body">
     <div id="product" class="l-product-desc product-theme">
-        <h1> Wall Art </h1>
         <p> Paragraph describing wall art </p>
     </div>
     <div id="wallartgallery" class="l-home-gallery home-gallery-theme">
@@ -60,11 +59,11 @@
 <div id="footer" class="l-foot foot-theme">
     <div id="footerlinks" class="l-footer-links">
         <a href="https://www.facebook.com/TammyHudsonPhotography" target="_blank">
-            <img src="imgs/logo.png">
+            <img src="../../imgs/logo.png">
             facebook
         </a>
         <a href="https://www.instagram.com/tammyhudsonphotography/?hl=en" target="_blank">
-            <img src="imgs/logo.png">
+            <img src="../../imgs/logo.png">
             instagram
         </a>
         <a href="../../contact/subscribe/">

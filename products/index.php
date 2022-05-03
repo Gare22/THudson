@@ -59,11 +59,11 @@
 <div id="footer" class="l-foot foot-theme">
     <div id="footerlinks" class="l-footer-links">
         <a href="https://www.facebook.com/TammyHudsonPhotography" target="_blank">
-            <img src="imgs/logo.png">
+            <img src="../imgs/logo.png">
             facebook
         </a>
         <a href="https://www.instagram.com/tammyhudsonphotography/?hl=en" target="_blank">
-            <img src="imgs/logo.png">
+            <img src="../imgs/logo.png">
             instagram
         </a>
         <a href="../contact/subscribe/">
