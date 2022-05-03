@@ -37,11 +37,11 @@
 
 <div id="body" class="l-body">
     <div id="product" class="l-product-desc product-theme">
-        <p> Paragraph describing wall art </p>
+        <p> Paragraph describing the santa's workshop product </p>
     </div>
     <div id="wallartgallery" class="l-home-gallery home-gallery-theme">
         <p> 
-            This will be a gallery of wall art pictures (as examples of what you can do). 
+            This will be a gallery of santa's workshop example product pictures (as examples of what you can do). 
         </p>
     </div>
     <div id="process" class="l-process process-theme">

@@ -53,15 +53,15 @@
         </div>
     </div>
     <div id="products" class="l-products products-theme">
-        <a href="products/">
+        <a href="products/cake/">
             <img src="imgs/product.jpg">
             <h3 class="caption-theme">Cake Smash</h3>
         </a>
-        <a href="products/">
+        <a href="products/santa/">
             <img src="imgs/product1.jpg">
             <h3 class="caption-theme">Santa's Workshop</h3>
         </a>
-        <a href="products/">
+        <a href="products/wall/">
             <img src="imgs/product3.jpg">
             <h3 class="caption-theme">Wall Art</h3>
         </a>
