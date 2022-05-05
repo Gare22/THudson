@@ -29,3 +29,20 @@ h1 {
 a {
     color:inherit;
 }
+
+.l-galleries-list{
+    display:grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap:5rem;
+}
+
+.gallery-item{
+    height: 20rem;
+    width: 20rem;
+}
+
+.gallery-item img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
