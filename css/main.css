@@ -66,11 +66,7 @@ ol li{
 /*************************************************
             Modules - structure, sizing, etc.
 **************************************************/
-.line-break{
-    margin: auto;
-    width: 30vw;
-    border-bottom: .2rem solid #262626;
-}
+
 .title{
     font-size: 7rem;
     width: fit-content;
@@ -143,7 +139,7 @@ ol li{
 .l-gallery{
     height: calc(100vh - 10rem);
     margin: auto;
-    margin-top:5rem;
+    margin-top:2rem;
     text-align: center;
 }
 
