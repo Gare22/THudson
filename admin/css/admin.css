@@ -1,0 +1,31 @@
+
+/* Color Palette
+Dark Gray - #262626
+Gray - #57585e
+Light Gray - #a6a6a6
+White - #f1f1f1
+Green - #b2baaa
+*/
+
+body{
+    background-color: #a6a6a6;
+}
+
+.l-navbar{
+    background-color: #262626;
+    color: #f1f1f1;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    height: 7rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+a {
+    color:inherit;
+}

@@ -14,6 +14,8 @@ if(isset($_SESSION['user_id'])){
     <head>
         <meta charset="utf-8">
         <title>Admin Page</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="./css/admin.css">
     </head>
     <body>
 <?php
