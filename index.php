@@ -49,6 +49,14 @@
                 echo('<img src="' . $image . '">');
                 echo('</div>');
             }
+            //Add the first and second images to twice to allow for the infinite loop look
+            echo('<div class="gallery-item">');
+            echo('<img src="' . $images[0] . '">');
+            echo('</div>');
+            //second image
+            echo('<div class="gallery-item">');
+            echo('<img src="' . $images[1] . '">');
+            echo('</div>');
         ?>
         </div>
     </div>
@@ -160,7 +168,7 @@ function getGalleryWidth(){
     var children = document.getElementById('home-gallery').children;
     var totalWidth = 0;
 
-    for (var i = 0; i < children.length; i++) {
+    for (var i = 0; i < children.length-2; i++) {
         totalWidth += parseInt(children[i].offsetWidth, 10);
     }
 
