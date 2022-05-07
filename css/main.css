@@ -160,7 +160,6 @@ ol li{
 
 .gallery-item{
     height: calc(100vh - 10rem);
-    scroll-snap-align: center;
     display: inline-block;
 }
 
