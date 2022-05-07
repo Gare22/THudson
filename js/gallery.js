@@ -1,7 +1,7 @@
 const style = document.createElement('style');
 style.innerHTML = `
 .gallery-items:first-child{
-    animation: bannermove 15s linear infinite;
+    animation: bannermove ` + getGalleryWidth()/125 +`s linear infinite;
 }
 
 
