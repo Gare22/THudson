@@ -155,13 +155,13 @@ ol li{
 .gallery-items{
     height: 100%;
     display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    overflow:hidden;
 }
 
 .gallery-item{
     height: calc(100vh - 10rem);
     scroll-snap-align: center;
+    display: inline-block;
 }
 
 .gallery-item img{

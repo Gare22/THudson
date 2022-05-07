@@ -27,15 +27,17 @@ if(isset($_GET['gallery'])){
 
     #add new images button
     echo '<div class="gallery-item">
+    <form id="image-upload" name="image-upload" action="upload.php" method="POST" enctype="multipart/form-data">
     Select image(s) to upload:
-    <input type="file" name="filesToUpload" id="filesToUpload" accept=".png, .jpg, .gif" multiple>
-    <input type="submit" value="Upload Image(s)" name="submit" onclick="uploadImages()">
+    <input type="file" name="filesToUpload[]" id="filesToUpload" accept=".png, .jpg, .gif" multiple>
+    <input type="button" value="Upload Image(s)" name="submitButton" onclick="uploadNormal()">
+    </form>
     </div>';
 }
 #if none, then...
 else{
     #echo the rest of the navbar (not needed for this portion)
-    echo '</div> <div class="l-galleries-list">';
+    echo '</div> <div class="l-title"> Photo Galleries</div> <div class="l-galleries-list">';
 
     #for each folder in "imgs/galleries/", generate a link. 
     #If link is clicked, use GET http request with gallery number
@@ -44,23 +46,86 @@ else{
     
     foreach($files as $file) {
         if (is_dir("../imgs/galleries/$file")) {
-            echo '<div class="gallery-folder">';
-            echo '<a href="'.'./?'.http_build_query(array('gallery' => $file)).'">';
+            echo '<a class="gallery-folder" href="'.'./?'.http_build_query(array('gallery' => $file)).'">';
             echo $file;
-            echo '</a></div>';
+            echo '</a>';
         }
     }
 }
 ?>
 <script>
-async function uploadImages(){
-    let formData = new FormData();
-    formData.append("file", filesToUpload.files);
-    await fetch('/upload.php', {
-        method: "POST",
-        body: formData
+
+function uploadNormal(){
+    var form = document.getElementById('image-upload');
+    
+    var gallery = document.createElement('input');
+    gallery.setAttribute('name', 'gallery');
+    gallery.setAttribute('value', "<?php echo($_GET['gallery']); ?>");
+    gallery.setAttribute('type', 'hidden');
+
+    form.appendChild(gallery);
+
+    form.submit();
+}
+
+function uploadAJAX(){
+    // Variable to hold request
+    var request;
+
+    // Bind to the submit event of our form
+    $("#image-upload").submit(function(event){
+
+        // Prevent default posting of form - put here to work in case of errors
+        event.preventDefault();
+
+        // Abort any pending request
+        if (request) {
+            request.abort();
+        }
+        // setup some local variables
+        var $form = $(this);
+
+        // Let's select and cache all the fields
+        var $inputs = $form.find("input, select, button, textarea");
+
+        // Serialize the data in the form
+        var serializedData = $form.serialize();
+
+        // Let's disable the inputs for the duration of the Ajax request.
+        // Note: we disable elements AFTER the form data has been serialized.
+        // Disabled form elements will not be serialized.
+        $inputs.prop("disabled", true);
+
+        // Fire off the request to /form.php
+        request = $.ajax({
+            url: "upload.php",
+            type: "post",
+            data: serializedData
+        });
+
+        // Callback handler that will be called on success
+        request.done(function (response, textStatus, jqXHR){
+            // Log a message to the console
+            console.log("Hooray, it worked!");
+        });
+
+        // Callback handler that will be called on failure
+        request.fail(function (jqXHR, textStatus, errorThrown){
+            // Log the error to the console
+            console.error(
+                "The following error occurred: "+
+                textStatus, errorThrown
+            );
+        });
+
+        // Callback handler that will be called regardless
+        // if the request failed or succeeded
+        request.always(function () {
+            // Reenable the inputs
+            $inputs.prop("disabled", false);
+        });
+
     });
-    alert('Your images have been uploaded successfully.');
 }
 </script>
 </div>

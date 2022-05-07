@@ -41,7 +41,7 @@
 
 <div id="body" class="l-body">
     <div id="homepagegallery" class="l-gallery home-gallery-theme">
-        <div class="gallery-items no-scrollbar">
+        <div id="home-gallery" class="gallery-items no-scrollbar">
         <?php //Home page gallery goes here
             $images = glob('imgs/galleries/homepage/*.{jpg,png,gif}', GLOB_BRACE);
             foreach($images as $image){
@@ -127,7 +127,7 @@
 </div>
 </body>
 
-<!--Navmenu Script (for mobile button) Commented out temporarily
+
 <script>
     function mobileMenu() {
         var x = document.getElementById("navlinks");
@@ -137,6 +137,37 @@
             x.className = "l-nav-links navlinks-theme";
         }
     }   
-</script>-->
+</script>
+
+<script>
+const style = document.createElement('style');
+style.innerHTML = `
+.gallery-items:first-child{
+    animation: bannermove 15s linear infinite;
+}
+
+
+@keyframes bannermove {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: -`+ getGalleryWidth() +`px;
+    }
+}`
+
+function getGalleryWidth(){
+    var children = document.getElementById('home-gallery').children;
+    var totalWidth = 0;
+
+    for (var i = 0; i < children.length; i++) {
+        totalWidth += parseInt(children[i].offsetWidth, 10);
+    }
+
+    return totalWidth;
+}
+
+document.head.appendChild(style);
+</script>
 
 </html>

@@ -27,6 +27,15 @@ body{
     height: 7rem;
 }
 
+.l-title{
+    width: 40%;
+    text-align: center;
+    font-size: 3.5rem;
+    margin:auto;
+    margin-top:2rem;
+}
+
+
 h1 {
     font-size: 2rem;
 }
@@ -41,6 +50,7 @@ a {
     min-height: calc(100vh - 7rem);
     margin:auto;
     padding:1rem;
+    padding-top:2rem;
     margin-top: 2rem;
     display:grid;
     grid-template-columns: 30% 30% 30%;
@@ -58,5 +68,21 @@ a {
     height: 100%;
     width: 100%;
     object-fit:cover;
+}
+
+.gallery-folder{
+    text-align: center;
+    margin: auto;
+    background-color: rgb(245, 215, 108);
+    width: 50%;
+    height: 8rem;
+    border:#262626 solid 2px;
+    padding-top:4rem;
+    text-decoration: none;
+}
+
+.gallery-folder:hover{
+    text-decoration: underline;
+    background-color: rgb(154, 134, 61);
 }
 

@@ -16,6 +16,7 @@ if(isset($_SESSION['user_id'])){
         <title>Admin Page</title>
         <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="./css/admin.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
 <?php
