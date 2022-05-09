@@ -18,7 +18,7 @@ function getGalleryWidth(){
     var children = document.getElementById('home-gallery').children;
     var totalWidth = 0;
 
-    for (var i = 0; i < children.length-2; i++) {
+    for (var i = 0; i < children.length-3; i++) {
         totalWidth += parseInt(children[i].offsetWidth, 10);
     }
 

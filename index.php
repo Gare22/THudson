@@ -57,6 +57,10 @@
             echo('<div class="gallery-item">');
             echo('<img src="' . $images[1] . '">');
             echo('</div>');
+            //third image
+            echo('<div class="gallery-item">');
+            echo('<img src="' . $images[2] . '">');
+            echo('</div>');
         ?>
         </div>
     </div>

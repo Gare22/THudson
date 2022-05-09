@@ -210,7 +210,7 @@ ol li{
     flex-wrap: wrap;
     gap:5vh;
     margin-top:3rem;
-    padding: 10rem;
+    padding: 10%;
 }
 
 .l-products a{
@@ -242,9 +242,9 @@ ol li{
     opacity: 0.6;
 }
 
-.l-products a:hover h3{
+/*.l-products a:hover h3{
     color:#80966b;
-}
+}*/
 /*Desktop Version*/
 @media (min-width:769px){
     .l-body{
@@ -296,7 +296,7 @@ ol li{
         flex-direction:row;
         gap:5vw;
         margin-top:3rem;
-        padding: 10rem;
+        padding: 10%;
     }
 
     .l-products a{
