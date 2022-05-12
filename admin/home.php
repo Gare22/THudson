@@ -19,6 +19,7 @@ if(isset($_GET['gallery'])){
         echo('<div class="gallery-item">');
         #print image
         echo('<img src="' . $image . '">');
+        echo('<a href=""> Delete </a>');
 
         #delete button
 

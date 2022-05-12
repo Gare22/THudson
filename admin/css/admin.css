@@ -70,6 +70,13 @@ a {
     object-fit:cover;
 }
 
+.gallery-item a{
+    color:whitesmoke;
+    position: relative;
+    top:-10%;
+    left:10%;
+}
+
 .gallery-folder{
     text-align: center;
     margin: auto;
