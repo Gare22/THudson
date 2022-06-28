@@ -21,6 +21,7 @@
         <a href="../">HOME</a>
         <a href="../contact/">CONTACT</a>
         <a href="./" class="is-active">PRODUCTS</a>
+        <a href="../sessions/">SESSIONS</a>
     </div>
     <!-- Commented out navbutton>
     <div class="mobile-nav-button is-mobile">
@@ -29,7 +30,7 @@
         </a> 
     </div>-->
     <div class="logo">
-        <img src="../imgs/logo-altered.png" alt="HowUseless Logo">
+        <img loading="lazy" src="../imgs/logo-altered.png" alt="HowUseless Logo">
     </div>
     <div class="line-break"></div>
 </div>
@@ -38,15 +39,15 @@
 <div id="body" class="l-body">
     <div id="products" class="l-products products-theme">
         <a href="cake/">
-            <img src="../imgs/product.jpg">
+            <img loading="lazy"src="../imgs/product.jpg">
             <h3 class="caption-theme">Cake Smash</h3>
         </a>
         <a href="santa/">
-            <img src="../imgs/product1.jpg">
+            <img loading="lazy"src="../imgs/product1.jpg">
             <h3 class="caption-theme">Santa's Workshop</h3>
         </a>
         <a href="wall/">
-            <img src="../imgs/product3.jpg">
+            <img loading="lazy"src="../imgs/product3.jpg">
             <h3 class="caption-theme">Wall Art</h3>
         </a>
     </div>
@@ -59,24 +60,24 @@
 <div id="footer" class="l-foot foot-theme">
     <div id="footerlinks" class="l-footer-links">
         <a href="https://www.facebook.com/TammyHudsonPhotography" target="_blank">
-            <img src="../imgs/logo.png">
+            <img loading="lazy"src="../imgs/footer1.jpg">
             facebook
         </a>
         <a href="https://www.instagram.com/tammyhudsonphotography/?hl=en" target="_blank">
-            <img src="../imgs/logo.png">
+            <img loading="lazy"src="../imgs/footer2.jpg">
             instagram
         </a>
-        <a href="../contact/subscribe/">
-            <img src="../imgs/logo.png">
+        <a href="./contact/subscribe/">
+            <img loading="lazy"src="../imgs/footer3.jpg">
             subscribe
         </a>
-        <a href="../contact/">
-            <img src="../imgs/logo.png">
+        <a href="./contact">
+            <img loading="lazy"src="../imgs/cakesmash-footer.jpg">
             contact
         </a>
     </div>
     <div id="copyright" class="l-copyright">
-        <a href="../privacy/">privacy policy</a>
+        <a href="/privacy/">privacy policy</a>
         <p>
             copyright ©
             <?php $the_year = date("Y"); echo $the_year; ?>

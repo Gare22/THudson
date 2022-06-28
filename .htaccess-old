@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "Protected Site"
+AuthUserFile /home/rncatkom/.htpasswd
+require valid-user
+RewriteEngine On  
+RewriteCond %{SERVER_PORT} 80  
+RewriteRule ^(.*)$ https://www.tammyhudson.com/$1 [R,L] 

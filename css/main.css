@@ -67,6 +67,13 @@ ol li{
             Modules - structure, sizing, etc.
 **************************************************/
 
+
+.line-break-visible{
+    background-color: #262626;
+    height: 8px;
+    width: 40%;
+    border-radius: 10px;
+}
 .title{
     font-size: 7rem;
     width: fit-content;
@@ -133,74 +140,114 @@ ol li{
 .l-body{
     min-height: calc(100vh - 13rem);
     width: 100%;
-}
-
-/*Gallery layout*/
-.l-gallery{
-    height: calc(100vh - 10rem);
-    margin: auto;
-    margin-top:2rem;
-    text-align: center;
-}
-
-.no-scrollbar {
-    scrollbar-width: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-
-.gallery-items{
-    height: 100%;
     display: flex;
-    overflow:hidden;
+    flex-direction: column;
+    align-items: center;
+    margin-top:2rem;
+    margin-bottom: 15rem;
 }
 
-.gallery-item{
-    height: calc(100vh - 10rem);
-    display: inline-block;
+.small-top-margin{
+    margin-top:3rem;
 }
-
-.gallery-item img{
-    height: 100%;
-    object-fit: contain;
+.medium-top-margin{
+    margin-top:4rem;
 }
-
-/*About Tammy*/
-.l-about{
-    margin-top:5rem;
+.big-top-margin{
+    margin-top:15rem;
+}
+/*Homepage*/
+.home-title-page{
+    height: auto;
+    max-width: 1200px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+.home-main-img{
+    width: 95%;
+    height: 85%;
+    object-fit: contain;
+}
+.title-page-text{
+    margin:2rem;
+    font-size: min(6rem, 6vw);
+}
+
+.home-link-img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.home-link{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.portrait-container{
+/*About Tammy*/
+
+.about-me{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.about-left{
+    width:100%;
+    max-height: 60vh;
+    height: 60vh;
+}
+.about-right{
     width: 80%;
 }
 
-.portrait-container img{
-    width: 100%;
+.about-title{
+    font-size: 6rem;
+    text-align: center;
+    width: fit-content;
+}
+
+.about-img{
     height: 100%;
+    width: 100%;
     object-fit: contain;
-    /*border-radius: 10%;*/
 }
 
-.l-about-paragraphs p{
-    font-size: 2rem;
-    padding:1rem 0;
+.about-link{
+    text-decoration: underline;
+    font-style: italic;
 }
 
-.l-about-paragraphs{
-    margin: 1rem;
+@media (min-width:769px){
+    .about-me{
+        flex-direction: row;
+        align-items:flex-start;
+        width: 80%;
+        max-width: 800px;
+        height: max(100vh, fit-content);
+    }
+    .about-left{
+        width:60%;
+        max-height: 90vh;
+    }
+    .about-right{
+        width: 40%;
+    }
 }
 
-.l-about li{
-    font-size: 2rem;
+
+
+.auto-margin{
+    margin:auto;
 }
+
+
+
 
 /*Products*/
 .l-products{
@@ -252,42 +299,8 @@ ol li{
         min-height: calc(100vh - 13rem);
     }
 
-    /*Homepage gallery*/
-    .l-home-gallery{
-        /*temp min-height for dev*/
-        min-height: 100vh;
-        /*temp background color*/
-    }
-
     /*About Tammy*/
-    .l-about{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 10rem;
-    }
-
-    .l-about-paragraphs{
-        margin: 4rem;
-    }
-
-    .portrait-container{
-        max-height: 90vh;
-        max-width: 40vw;
-        text-align: center;
-    }
-
-    .portrait-container img{
-        width: 80%;
-        height: 80%;
-        object-fit: contain;
-        /*border-radius: 10%;*/
-    }
-
-    .l-about-paragraphs{
-        width: 40vw;
-    }
+    
 
     /*Products*/
     .l-products{
@@ -358,11 +371,11 @@ ol li{
 }
 
 .l-footer-links a img{
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
-    background-color: #f1f1f1;
+    background-color: #020202;
     margin-bottom: .5rem;
 }
 
@@ -405,9 +418,11 @@ ol li{
     .l-footer-links a img{
         width: 80%;
         height: 80%;
-        object-fit: contain;
+        object-fit: cover;
         border-radius: 50%;
-        background-color: #f1f1f1;
+        
+        box-shadow: 0px 10px 10px black;
+        background-color: #262626;
         margin-bottom: .5rem;
     }
 }
@@ -490,7 +505,9 @@ font-family: 'Cookie', cursive;
 font-family: 'Roboto', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
-
+.christmas-text-theme{
+    color: black;
+}
 .main-theme{
     background-color: #f1f1f1;
 }
@@ -521,6 +538,10 @@ font-family: 'Raleway', sans-serif;
 .nav-links-theme a:hover{
     color:#80966b;
     border-color: #80966b;
+}
+
+.about-theme{
+    font-family:'Courier New', Courier, monospace;
 }
 
 .title-theme{

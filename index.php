@@ -25,6 +25,7 @@
         <a href="./" class="is-active ">HOME</a>
         <a href="./contact/">CONTACT</a>
         <a href="./products/">PRODUCTS</a>
+        <a href="./sessions/">SESSIONS</a>
     </div>
     <!-- Commented out navbutton>
     <div class="mobile-nav-button is-mobile">
@@ -33,77 +34,57 @@
         </a> 
     </div>-->
     <div class="logo">
-        <img src="./imgs/logo-altered.png" alt="HowUseless Logo">
+        <img src="./imgs/logo-altered.png" alt="Tammy Hudson Photography Logo">
     </div>
     <div class="line-break"></div>
 </div>
 
 
 <div id="body" class="l-body">
-    <div id="homepagegallery" class="l-gallery home-gallery-theme">
-        <div id="home-gallery" class="gallery-items no-scrollbar">
-        <?php //Home page gallery goes here
-            $images = glob('imgs/galleries/homepage/*.{jpg,png,gif}', GLOB_BRACE);
-            foreach($images as $image){
-                echo('<div class="gallery-item">');
-                echo('<img src="' . $image . '">');
-                echo('</div>');
-            }
-            //Add the first and second images to twice to allow for the infinite loop look
-            echo('<div class="gallery-item">');
-            echo('<img src="' . $images[0] . '">');
-            echo('</div>');
-            //second image
-            echo('<div class="gallery-item">');
-            echo('<img src="' . $images[1] . '">');
-            echo('</div>');
-            //third image
-            echo('<div class="gallery-item">');
-            echo('<img src="' . $images[2] . '">');
-            echo('</div>');
-        ?>
-        </div>
-    </div>
-    <div id="products" class="l-products products-theme">
-        <a href="products/cake/">
-            <img src="imgs/product.jpg">
-            <h3 class="caption-theme">Cake Smash</h3>
+    <div class="home-title-page small-top-margin">
+        <!--/*Link to christmas product*/-->
+        <a href="" class="home-link">
+            <img loading="lazy" src="imgs/2 Book 5.jpg" class="home-link-img">
+            <h2 class="title-page-text christmas-text-theme">Magical Christmas</h2>
         </a>
-        <a href="products/santa/">
-            <img src="imgs/product1.jpg">
-            <h3 class="caption-theme">Santa's Workshop</h3>
-        </a>
-        <a href="products/wall/">
-            <img src="imgs/product3.jpg">
-            <h3 class="caption-theme">Wall Art</h3>
-        </a>
+        <div class="line-break-visible"></div>
     </div>
-    <div id="process" class="l-process process-theme">
-        
-    </div>
-    <div id="about" class="l-about about-theme">
-        <div class="portrait-container">
-            <img src="imgs/TammyHudsonPortrait.jpg">
-            
-        </div>
-        <div id="aboutparagraphs" class="l-about-paragraphs">
-            <h3 class="title title-theme">Tammy Hudson</h3>
-            <p>
-                Hi! I'm Tammy Hudson, a photographer based in Knoxville, Tennessee. I have been .... I believe photography... more fluff and stuff. 
-            </p>
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            
-                <h3 class="subtitle subtitle-theme">The Process</h3>
-                <ol>
-                    <li>Message Tammy...</li>
-                    <li>Schedule a date...</li>
-                    <li>Design...</li>
-                    <li>Final product...</li>
-                </ol>
-            
+    <div class="home-title-page big-top-margin">
+        <a href="" class="home-link">
+            <img loading="lazy" src="imgs/cakesmash.jpg" class="home-link-img">
+            <h3 class="title-page-text">Sessions</h3>
+        </a>
+        <div class="line-break-visible"></div>
+    </div>
+
+    <div class="home-title-page big-top-margin">
+        <a href="" class="home-link">
+            <img loading="lazy" src="imgs/products-image.jpg" class="home-link-img">
+            <h3 class="title-page-text">Products</h3>
+        </a>
+        <div class="line-break-visible"></div>
+    </div>
+
+    <div class="about-me big-top-margin">
+        <div class="about-left">
+            <img loading="lazy" class="about-img" src="imgs/tammy-picture.jpg">
+        </div>    
+    
+        <div class="about-right about-theme">
+            <h2 class="title-theme about-title auto-margin"> Tammy Hudson </h2>
+            <p class="medium-top-margin"> Hello! My name is Tammy Hudson. I
+            am a story teller and artist, blending
+            together images to create a legacy to
+            be passed down for generations to
+            come. I am passionate about
+            capturing magical moments that bring
+            joy and wonder through exquisite
+            wall art and beautiful story books. </p>
+
+            <p class="small-top-margin">In my free time, I love to volunteer
+            photographing horses at the
+            <a class="about-link" href="https://www.thehomestretchthoroughbredrescue.com/">Homestretch Thoroughbred Rescue</a>.</p>
         </div>
     </div>
 </div>
@@ -112,19 +93,19 @@
 <div id="footer" class="l-foot foot-theme">
     <div id="footerlinks" class="l-footer-links">
         <a href="https://www.facebook.com/TammyHudsonPhotography" target="_blank">
-            <img src="imgs/logo.png">
+            <img loading="lazy"src="imgs/footer1.jpg">
             facebook
         </a>
         <a href="https://www.instagram.com/tammyhudsonphotography/?hl=en" target="_blank">
-            <img src="imgs/logo.png">
+            <img loading="lazy"src="imgs/footer2.jpg">
             instagram
         </a>
         <a href="./contact/subscribe/">
-            <img src="imgs/logo.png">
+            <img loading="lazy"src="imgs/footer3.jpg">
             subscribe
         </a>
         <a href="./contact">
-            <img src="imgs/logo.png">
+            <img loading="lazy"src="imgs/cakesmash-footer.jpg">
             contact
         </a>
     </div>
@@ -150,9 +131,4 @@
         }
     }   
 </script>
-
-<script src="js/gallery.js" defer>
-
-</script>
-
 </html>
